@@ -6,12 +6,11 @@ import img from "../../assets/foto.jpg"
 import style from "./Home.module.css"
 function Home() {
   return (
-    <div className="w-screen min-h-screen overflow-y-auto overflow-x-hidden">
-      <Header />
-      <div className={` ${style.box} w-screen flex justify-around items-center`}>
-        <div>
+    <LayoutPage>
+      <div className={` ${style.box} w-screen flex justify-evenly items-center`}>
+        <div className='w-[550px]'>
           <h1 className='text-7xl'>
-            Frase de Efeito
+            Obcecada em te transformar na sua melhor versão
           </h1>
           <button className='bg-[#EACDC3] text-xl p-3 '>Veja mais</button>
         </div>  
@@ -19,8 +18,16 @@ function Home() {
           <img className='h-[600px]' src={img} alt="foto biomedica" />
         </div>
       </div>
-      <Footer />
-    </div>
+
+      <div className='w-screen'>
+        <div>
+          <h1>Sobre Mim</h1>
+          <p></p>
+        </div>
+        <div></div>
+        <div></div>
+      </div>
+    </LayoutPage>
 
   );
 }
